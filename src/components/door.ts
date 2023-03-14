@@ -3,13 +3,13 @@ import * as THREE from 'three';
 export const getDoor = (): THREE.Mesh => {
     const textureLoader = new THREE.TextureLoader();
 
-    const texture = textureLoader.load('/textures/door/color.jpg');
-    const normalTexture = textureLoader.load('/textures/door/normal.jpg');
-    const heightTexture = textureLoader.load('/textures/door/height.jpg');
-    const metalnessTexture = textureLoader.load('/textures/door/metalness.jpg');
-    const roughnessTexture = textureLoader.load('/textures/door/roughness.jpg');
-    const ambientOcclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.jpg');
-    const alphaTexture = textureLoader.load('/textures/door/alpha.jpg');
+    const texture = textureLoader.load('./textures/door/color.jpg');
+    const normalTexture = textureLoader.load('./textures/door/normal.jpg');
+    const heightTexture = textureLoader.load('./textures/door/height.jpg');
+    const metalnessTexture = textureLoader.load('./textures/door/metalness.jpg');
+    const roughnessTexture = textureLoader.load('./textures/door/roughness.jpg');
+    const ambientOcclusionTexture = textureLoader.load('./textures/door/ambientOcclusion.jpg');
+    const alphaTexture = textureLoader.load('./textures/door/alpha.jpg');
 
     const geometry = new THREE.PlaneGeometry(5, 5, 100, 100);
     const material = new THREE.MeshStandardMaterial({
