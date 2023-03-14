@@ -2,9 +2,6 @@ import * as THREE from 'three';
 import './style.css';
 import { getPlane } from './components/plane';
 import { getControls } from './components/controls';
-// import { getSpotLight } from './components/spotlight';
-import { VOLUMETRIC_SPOTLIGHT1, VOLUMETRIC_SPOTLIGHT2, VOLUMETRIC_SPOTLIGHT3 } from './constants';
-import { getVolumetricSpotLight } from './components/volumetricSpotlight';
 import { getDoor } from './components/door';
 import { getPointLight } from './components/pointlight';
 import { getIcosahedr } from './components/icosahedr';
@@ -14,13 +11,6 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 
 
 scene.fog = new THREE.FogExp2('rgb(255,255,255)', 0.001);
-
-// const volumetricSpotlight_1 = getVolumetricSpotLight({ ...VOLUMETRIC_SPOTLIGHT1 });
-// const volumetricSpotlight_2 = getVolumetricSpotLight({ ...VOLUMETRIC_SPOTLIGHT2 });
-// const volumetricSpotlight_3 = getVolumetricSpotLight({ ...VOLUMETRIC_SPOTLIGHT3 });
-
-
-// scene.add(volumetricSpotlight_1, volumetricSpotlight_2, volumetricSpotlight_3);
 
 camera.position.set(0, 2, 7);
 const gridHelper = new THREE.GridHelper(200, 50);
